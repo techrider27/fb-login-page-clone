@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
     <title>Facebook - log in or sign up</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
 
 
-
-    <header class="bg-[#fffbe2] py-2">
+<!-- mobile header-->
+    <header class="bg-[#fffbe2] py-2 lg:hidden">
       <div class="flex justify-start items-center">
         <div class="ml-4 mr-2">
-          <img src="/mob-icon.png" class="w-[17px] h-8" alt="" />
+          <img src="assets/images/mob-icon.png" class="w-[17px] h-8" alt="" />
         </div>
         <div class="">
           <p class="text-[#3b5998] text-sm font-normal">
@@ -24,9 +24,49 @@
         </div>
       </div>
     </header>
-    <img src="/fb.svg" class="py-2 w-28 d-block mx-auto" alt="" />
+    <img src="assets/images/fb.svg" class="py-2 w-28 d-block mx-auto lg:hidden" alt="" />
+<!-- mobile header-->
 
-    <div class="container max-w-8xl sm:max-w-md mx-auto">
+
+    <div class="container max-w-full bg-[#f0f2f5] pt-[72px] pb-28 h-[96vh] hidden lg:block">
+      <div class="flex justify-center items-start mt-24">
+        <div class="w-[36rem]">
+          <img src="assets/images/fb.svg" class="h-[106px] -ml-6 -mb-3" alt="" />
+          <p class="text-3xl">Facebook helps you connect and share with the people in your life.</p>
+        </div>
+          <div class="flex flex-col">
+            <div class="bg-white py-5 pb-6 px-3 w-96 rounded-lg shadow-[-2px_2px_10px_0px_#beb9b9] relative">
+              <div class="flex flex-col">
+                <form action="#" method="post">
+                  <input type="email" class="w-full p-4 rounded-md border-[1px] focus:outline-none focus:border-sky-400 focus:shadow-[0px_0px_3px_0px] focus:shadow-sky-400 border-slate-300 placeholder:text-[#a59f9f] font-medium text-sm pl-3" name="email" id="" placeholder="Email address or phone number">
+                  <input type="password" class="w-full mt-2 p-4 rounded-md border-[1px] focus:outline-none focus:border-sky-400 focus:shadow-[0px_0px_3px_0px] focus:shadow-sky-400 border-slate-300 placeholder:text-[#a59f9f] font-medium text-sm pl-3" name="email" id="" placeholder="Password">
+                  <button type="submit" class="bg-[#1877f2] text-white text-lg font-bold p-1 rounded-[5px] w-full h-12 mx-auto mt-3">Log in</button>
+                </form>
+              </div>
+              <div class="flex justify-center">
+                <a href="#" class="text-[#216fdb] text-sm mt-3 font-normal hover:underline">Forgotten password?</a>
+              </div>
+              <div class="flex flex-col mt-3">
+                <div class="flex justify-center items-baseline">
+                  <div class="w-full border-t-2 border-[#e9e9e9] h-[0.25px]"></div>
+                  <div class="w-full block border-t-2 border-[#e9e9e9] h-[0.25px]"></div>
+                </div>
+              </div>
+              <div class="flex justify-center mt-4">
+                <a href="#" class="bg-[#42b72a] hover:bg-[#3a9f26] text-white text-base mt-3 font-bold py-3 px-5 rounded-[5px]">Create New Account</a>
+              </div>
+            </div>
+            <div class="flex flex-col">
+            <p class="text-center mt-6 text-sm"><span class="font-bold">Create a Page</span> for a celebrity, brand or business.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- mobile form area -->
+    <div class="container max-w-8xl sm:max-w-md mx-auto lg:hidden">
       <div class="flex flex-col px-4">
         <form action="#" method="post">
           <input type="email" class="w-full bg-[#f5f6f7] p-3 rounded-md border-b-[1px] border-r-[1px] border-l-[1px] border-slate-300 placeholder:text-[#696767] font-normal text-sm pl-3" name="email" id="" placeholder="Mobile number or email address">
@@ -52,10 +92,15 @@
         <a href="#" class="bg-[#00a400] text-white text-sm mt-3 font-bold py-2 px-4 rounded-[4px]">Create New Account</a>
       </div>
     </div>
+<!-- mobile form area -->
 
 
-    <footer class="mt-[102px]">
-      <div class="container max-w-8xl mx-auto">
+
+<!-- footer -->
+    <footer class="mt-[102px] lg:mt-0">
+
+      <!-- mobile footer -->
+      <div class="container max-w-8xl mx-auto lg:hidden">
         <div class="flex justify-around pl-4 pr-4 p-[6px]">
           <div class="text-center text-xs w-full">
             <ul>
@@ -84,9 +129,80 @@
             <li class="text-[#8a8d91] text-[10px] mt-[2px]">More</li>
           </ul>
         </div>
-        <p class="text-[#808080] text-center mt-[10px] text-xs">Meta &copy; 2022</p>
+        <p class="text-[#808080] text-center mt-[10px] text-xs">Meta &copy; <script>
+          document.write(new Date().getFullYear())
+      </script>
+      </p>
+      </div>
+      <!-- mobile footer -->
+
+      <div class="container max-w-8xl mx-auto py-3 hidden lg:block">
+        <div class="flex justify-center w-9/12">
+          <ul class="flex flex-row items-center">
+            <li class="py-2 px-2 text-[#90949c] text-xs">English (UK)</li>
+            <li class="py-2 px-2 text-[#90949c] text-xs">हिन्दी</li>
+            <li class="py-2 px-2 text-[#90949c] text-xs">ଓଡ଼ିଆ</li>
+            <li class="py-2 px-2 text-[#90949c] text-xs">বাংলা</li>
+            <li class="py-2 px-2 text-[#90949c] text-xs">বাংলা</li>
+            <li class="py-2 px-2 text-[#90949c] text-xs">ગુજરાતી</li>
+            <li class="py-2 px-2 text-[#90949c] text-xs">मराठी</li>
+            <li class="py-2 px-2 text-[#90949c] text-xs">தமிழ்</li>
+            <li class="py-2 px-2 text-[#90949c] text-xs">తెలుగు</li>
+            <li class="py-2 px-2 text-[#90949c] text-xs">മലയാളം</li>
+            <li class="py-2 px-2"><i class="fa-solid fa-plus font-extrabold text-sm bg-[#f5f6f7] rounded-[2px] border-[1px] border-[#ccd0d5] py-0 px-3"></i></li>
+          </ul>
+        </div>
+        <hr class="w-7/12 mx-auto">
+        <div class="flex justify-center ml-4 w-11/12">
+          <ul class="flex flex-row items-center">
+            <li class="p-2 text-[#8a8d91] text-xs">Signup</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Log in</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Messenger</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Facebook Lite</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Watch</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Places</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Games</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Marketplace</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Meta Pay</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Oculus</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Portal</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Instagram</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Bulletin</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Fundraisers</li>
+          </ul>
+        </div>
+        <div class="flex justify-center -mt-3 ml-8 w-11/12">
+          <ul class="flex flex-row items-center">
+            <li class="p-2 text-[#8a8d91] text-xs">Services</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Voting Information Centre</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Privacy Policy</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Privacy Centre</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Groups</li>
+            <li class="p-2 text-[#8a8d91] text-xs">About</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Create ad</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Create Page</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Developers</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Careers</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Coolies</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Adchoices</li>
+          </ul>
+        </div>
+        <div class="flex justify-center -mt-3 -ml-9 w-3/5">
+          <ul class="flex flex-row items-center">
+            <li class="p-2 text-[#8a8d91] text-xs">Terms</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Help</li>
+            <li class="p-2 text-[#8a8d91] text-xs">Contact uploading and non-users</li>
+          </ul>
+        </div>
+        <div class="flex justify-center mt-4 w-5/12 ml-2">
+          <p class="text-[#808080] text-center mt-[10px] text-xs">Meta &copy; <script>
+            document.write(new Date().getFullYear())
+        </script>
+        </p>
+        </div>
       </div>
     </footer>
+    <!-- footer -->
 
   </body>
 </html>
