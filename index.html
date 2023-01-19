@@ -129,9 +129,7 @@
             <li class="text-[#8a8d91] text-[10px] mt-[2px]">More</li>
           </ul>
         </div>
-        <p class="text-[#808080] text-center mt-[10px] text-xs">Meta &copy; <script>
-          document.write(new Date().getFullYear())
-      </script>
+        <p class="text-[#808080] text-center mt-[10px] text-xs" id="year-2">
       </p>
       </div>
       <!-- mobile footer -->
@@ -195,14 +193,19 @@
           </ul>
         </div>
         <div class="flex justify-center mt-4 lg:w-[18%] xl:w-5/12 ml-2">
-          <p class="text-[#808080] text-center mt-[10px] text-xs">Meta &copy; <script>
-            document.write(new Date().getFullYear())
-        </script>
+          <p class="text-[#808080] text-center mt-[10px] text-xs" id="year"> 
         </p>
         </div>
       </div>
     </footer>
     <!-- footer -->
+    <script>
+      const date = new Date();
+      const display = date.getFullYear();
+      document.getElementById('year').innerHTML= "Meta &copy;" + display;
+      document.getElementById('year-2').innerHTML= "Meta &copy;" + display;
+
+    </script>
 
   </body>
 </html>
